@@ -16,7 +16,7 @@ print("The average is", average)
 #------------------------------------------------------------------------------
 
 
-# Question2. Write a python program to compute a person's income tax.
+#Question2. Write a python program to compute a person's income tax.
 
 gross_income = float(input("Please enter your income.\n$"))
 
@@ -31,7 +31,10 @@ taxable_income = gross_income - 10000 - (dependent_no * 3000)
 
 tax_payable = round( (20 / 100 * taxable_income), 2)
 
-print("Your income tax is $",tax_payable)
+if tax_payable > 0:
+    print("Your income tax is $",tax_payable)
+else:
+    print("Your income is not eligible for taxes")
 
 
 #------------------------------------------------------------------------------
